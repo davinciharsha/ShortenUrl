@@ -1,0 +1,16 @@
+<section class="main">
+    <div class="requestForm">
+        <form [formGroup]="requestForm" (ngSubmit)="onSubmit()">
+            <mat-form-field class="example-form-field">
+                <mat-label>Enter the URL</mat-label>
+                <input matInput autocomplete="off" required type="text" formControlName="inputUrl">
+            </mat-form-field>
+            <div class="form-group">
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="urlGrid">
+        <app-url-datas-grid [sendingGridData]="sendingGridData"></app-url-datas-grid>
+    </div>
+</section>
